@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.BookingController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TabPane prefHeight="393.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Avresa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="485.0">
+                     <children>
+                        <ComboBox fx:id="departureDate" layoutX="14.0" layoutY="33.0" onAction="#chooseDate" prefHeight="28.0" prefWidth="150.0" promptText="Avresedatum" />
+                        <ComboBox fx:id="cabinOptions" layoutX="14.0" layoutY="122.0" onAction="#cabinOptionsComboBox" prefHeight="28.0" prefWidth="150.0" promptText="Hytt" />
+                        <ComboBox fx:id="foodOptions" layoutX="14.0" layoutY="206.0" onAction="#foodOptionsComboBox" prefHeight="28.0" prefWidth="150.0" promptText="Matpaket" />
+                        <DatePicker fx:id="date" layoutX="198.0" layoutY="286.0" prefHeight="28.0" />
+                        <ComboBox fx:id="activities" layoutX="15.0" layoutY="286.0" prefHeight="28.0" prefWidth="117.0" promptText="Evenemang" />
+                        <TextArea fx:id="cabinInfo" editable="false" layoutX="198.0" layoutY="91.0" prefHeight="94.0" prefWidth="251.0" promptText="HyttInfo" />
+                        <TextArea fx:id="foodInfo" editable="false" layoutX="198.0" layoutY="194.0" prefHeight="52.0" prefWidth="250.0" promptText="MatPaketInfo" />
+                        <Button fx:id="add" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#addActivities" prefHeight="28.0" prefWidth="61.0" text="Lägg till" />
+                        <ComboBox fx:id="showActivities" layoutX="198.0" layoutY="323.0" prefHeight="28.0" prefWidth="150.0" promptText="Tillagda" />
+                        <Button fx:id="delete" layoutX="368.0" layoutY="325.0" mnemonicParsing="false" onAction="#deleteActivities" prefHeight="28.0" text="Ta bort" />
+                        <TextArea fx:id="availability" layoutX="198.0" layoutY="16.0" prefHeight="61.0" prefWidth="250.0" promptText="Tillgänglighet" />
+                        <Button layoutX="411.0" layoutY="288.0" mnemonicParsing="false" onAction="#sendToData" text="Send" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="MarsLogi">
+            <content>
+              <fx:include fx:id="marsLogi" source="marsLogi.fxml" />
+            </content>
+          </Tab>
+            <Tab text="Hemresa">
+                <content>
+                    <fx:include fx:id="returnTrip" source="returnTrip.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Personupg">
+                <content>
+                    <fx:include fx:id="personInfo" source="personInfo.fxml" />
+
+                </content>
+            </Tab>
+            <Tab text="Bekräfta">
+                <content>
+                    <fx:include fx:id="confirm" source="confirm.fxml" />
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button mnemonicParsing="false" text="Logga ut" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

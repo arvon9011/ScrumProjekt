@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.TabPageController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TabPane prefHeight="393.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Färjor">
+                    <content>
+                        <fx:include source="Ships.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Hytter">
+                    <content>
+                        <fx:include source="Cabins.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Matpaket">
+                    <content>
+                        <fx:include source="FoodOptions.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Hotell">
+                    <content>
+                        <fx:include source="Hotels.fxml" />
+
+                    </content>
+                </Tab>
+                <Tab text="Anställda">
+                    <content>
+                        <fx:include source="Employees.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button mnemonicParsing="false" onAction="#logOut" text="Logga ut" GridPane.rowIndex="1" />
+    </children>
+</GridPane>

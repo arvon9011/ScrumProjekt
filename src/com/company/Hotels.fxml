@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.HotelsController">
+   <children>
+      <Button layoutX="57.0" layoutY="54.0" mnemonicParsing="false" onAction="#newButton" prefHeight="25.0" prefWidth="64.0" text="Ny" />
+      <Button layoutX="150.0" layoutY="54.0" mnemonicParsing="false" text="Redigera" />
+      <ComboBox fx:id="hotelNames" layoutX="57.0" layoutY="125.0" prefWidth="150.0" />
+      <CheckBox fx:id="svit" layoutX="53.0" layoutY="192.0" mnemonicParsing="false" text="Svit" />
+      <CheckBox fx:id="single" layoutX="53.0" layoutY="219.0" mnemonicParsing="false" text="Enkel" />
+      <CheckBox fx:id="dubbel" layoutX="53.0" layoutY="246.0" mnemonicParsing="false" text="Dubbel" />
+      <CheckBox fx:id="fourBed" layoutX="53.0" layoutY="274.0" mnemonicParsing="false" text="4-bädds" />
+      <CheckBox fx:id="sixBed" layoutX="53.0" layoutY="302.0" mnemonicParsing="false" text="6-bädds" />
+      <TextField fx:id="svitNr" layoutX="170.0" layoutY="188.0" prefWidth="41.0" />
+      <TextField fx:id="singleNr" layoutX="170.0" layoutY="215.0" prefWidth="41.0" />
+      <TextField fx:id="dubbelNr" layoutX="170.0" layoutY="242.0" prefWidth="41.0" />
+      <TextField fx:id="fourBedNr" layoutX="170.0" layoutY="270.0" prefHeight="25.0" prefWidth="41.0" />
+      <TextField fx:id="sixBedNr" layoutX="170.0" layoutY="298.0" prefHeight="25.0" prefWidth="41.0" />
+      <Label layoutX="168.0" layoutY="164.0" text="Antal rum" />
+      <Label layoutX="60.0" layoutY="100.0" text="Namn" />
+      <Button layoutX="264.0" layoutY="298.0" mnemonicParsing="false" onAction="#saveButton" text="Spara" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ConfirmController">
+   <children>
+      <Button layoutX="37.0" layoutY="33.0" mnemonicParsing="false" onAction="#showBooking" text="Visa bokning" />
+      <TextArea fx:id="information" layoutX="193.0" layoutY="68.0" prefHeight="263.0" prefWidth="298.0" />
+      <Button layoutX="54.0" layoutY="310.0" mnemonicParsing="false" onAction="#sendToDataBase" prefHeight="59.0" prefWidth="102.0" text="Spara bokning" />
+   </children>
+</AnchorPane>

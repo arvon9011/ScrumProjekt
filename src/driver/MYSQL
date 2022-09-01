@@ -1,0 +1,132 @@
+/*Projekt Gr8, Mars_Travels*/
+----------------------------------------------------------------------------------------------------------
+create database Mars_travels;
+use Mars_travels;
+drop database Mars_travels;
+
+drop table customers;
+create table customers (
+id int primary key auto_increment,
+name varchar (20),
+email varchar (40)
+);
+
+drop table bookings;
+create table bookings (
+	id int primary key auto_increment,
+    customer_id int
+);
+
+
+
+drop table trips;
+create table trips (
+id int primary key auto_increment,
+booking_id int,
+shipping_id int,
+food ENUM ("Lyx1", "Lyx2", "Lyx3", "Mellan1", "Mellan2", "Mellan3", "Budget1", "Budget2", "Budget3"),
+sleep ENUM ("Spaceside", "Ekonomi", "Sovkapsel", "Inside", "Svit")
+);
+
+alter table trips
+modify food varchar(300),
+modify sleep varchar(500);
+
+
+drop table shipping;
+create table shipping (
+id int primary key auto_increment,
+to_mars boolean /* TRUE OM TILL*/,
+departure DATE
+);
+
+----------------------------------------------------------------------------------------------------------
+insert into shipping (to_mars, departure) values (true, '2021-01-01');
+insert into shipping (to_mars, departure) values (true, '2021-02-01');
+insert into shipping (to_mars, departure) values (true, '2021-03-01');
+insert into shipping (to_mars, departure) values (true, '2021-04-01');
+insert into shipping (to_mars, departure) values (true, '2021-05-01');
+insert into shipping (to_mars, departure) values (true, '2021-06-01');
+insert into shipping (to_mars, departure) values (true, '2021-07-01');
+insert into shipping (to_mars, departure) values (true, '2021-08-01');
+insert into shipping (to_mars, departure) values (true, '2021-09-01');
+insert into shipping (to_mars, departure) values (true, '2021-10-01');
+insert into shipping (to_mars, departure) values (true, '2021-11-01');
+insert into shipping (to_mars, departure) values (true, '2021-12-01');
+insert into shipping (to_mars, departure) values (false, '2021-01-01');
+insert into shipping (to_mars, departure) values (false, '2021-02-01');
+insert into shipping (to_mars, departure) values (false, '2021-03-01');
+insert into shipping (to_mars, departure) values (false, '2021-04-01');
+insert into shipping (to_mars, departure) values (false, '2021-05-01');
+insert into shipping (to_mars, departure) values (false, '2021-06-01');
+insert into shipping (to_mars, departure) values (false, '2021-07-01');
+insert into shipping (to_mars, departure) values (false, '2021-08-01');
+insert into shipping (to_mars, departure) values (false, '2021-09-01');
+insert into shipping (to_mars, departure) values (false, '2021-10-01');
+insert into shipping (to_mars, departure) values (false, '2021-11-01');
+insert into shipping (to_mars, departure) values (false, '2021-12-01');
+
+
+insert into shipping (to_mars, departure) values (true, '2022-01-01');
+insert into shipping (to_mars, departure) values (true, '2022-02-01');
+insert into shipping (to_mars, departure) values (true, '2022-03-01');
+insert into shipping (to_mars, departure) values (true, '2022-04-01');
+insert into shipping (to_mars, departure) values (true, '2022-05-01');
+insert into shipping (to_mars, departure) values (true, '2022-06-01');
+insert into shipping (to_mars, departure) values (true, '2022-07-01');
+insert into shipping (to_mars, departure) values (true, '2022-08-01');
+insert into shipping (to_mars, departure) values (true, '2022-09-01');
+insert into shipping (to_mars, departure) values (true, '2022-10-01');
+insert into shipping (to_mars, departure) values (true, '2022-11-01');
+insert into shipping (to_mars, departure) values (true, '2022-12-01');
+insert into shipping (to_mars, departure) values (false, '2022-01-01');
+insert into shipping (to_mars, departure) values (false, '2022-02-01');
+insert into shipping (to_mars, departure) values (false, '2022-03-01');
+insert into shipping (to_mars, departure) values (false, '2022-04-01');
+insert into shipping (to_mars, departure) values (false, '2022-05-01');
+insert into shipping (to_mars, departure) values (false, '2022-06-01');
+insert into shipping (to_mars, departure) values (false, '2022-07-01');
+insert into shipping (to_mars, departure) values (false, '2022-08-01');
+insert into shipping (to_mars, departure) values (false, '2022-09-01');
+insert into shipping (to_mars, departure) values (false, '2022-10-01');
+insert into shipping (to_mars, departure) values (false, '2022-11-01');
+insert into shipping (to_mars, departure) values (false, '2022-12-01');
+
+select * from shipping;
+
+insert into customers (name, email) values ("Gurra GG", "Gurras@gmail.com");
+insert into bookings (customer_id) values ( 1);
+insert into trips (booking_id, shipping_id, food, sleep) values (1, 1, "lyx1", "Spaceside");
+
+insert into customers (name, email) values ("Gurra GG", "Gurras@gmail.com");
+insert into bookings (customer_id) values ( 4);
+insert into trips (booking_id, shipping_id, food, sleep) values (4, 4, "LYX1", "Spaceside");
+
+insert into customers (name, email) values ("Walle Van", "dåligmail@gmail.com");
+insert into bookings (customer_id) values ( 5);
+insert into trips (booking_id, shipping_id, food, sleep) values (5, 5, "medel1", "Spaceside");
+
+----------------------------------------------------------------------------------------------------------
+DROP PROCEDURE store_info;
+DELIMITER //
+CREATE PROCEDURE store_info(namnet varchar(20), mailen varchar(40))
+BEGIN
+DECLARE custom_id int default 0;
+DECLARE book_id int default 0;
+INSERT INTO customers (name, email) values (namnet, mailen);
+	SET custom_id = LAST_INSERT_ID();
+INSERT INTO bookings (customer_id) values (custom_id);
+	SET book_id = LAST_INSERT_ID();
+INSERT INTO trips (booking_id, shipping_id, food, sleep) values (custom_id, 1, "lyx1", "Spaceside");
+END //
+DELIMITER ;
+
+CALL store_info("tjofräs", "test@mail");
+
+----------------------------------------------------------------------------------------------------------
+/*Test kod inför javan*/
+
+
+
+
+

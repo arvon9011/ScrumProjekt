@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.CabinsController">
+   <children>
+      <Button layoutX="45.0" layoutY="46.0" mnemonicParsing="false" onAction="#newButton" prefHeight="25.0" prefWidth="61.0" text="Ny" />
+      <Button layoutX="152.0" layoutY="46.0" mnemonicParsing="false" text="Redigera" />
+      <ComboBox fx:id="cabinName" layoutX="42.0" layoutY="105.0" prefWidth="150.0" />
+      <Label layoutX="42.0" layoutY="88.0" text="Namn" />
+      <ComboBox fx:id="amount" layoutX="43.0" layoutY="162.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="42.0" layoutY="145.0" text="Antal platser i hytten" />
+      <TextArea fx:id="cabinInfo" layoutX="47.0" layoutY="217.0" prefHeight="146.0" prefWidth="210.0" />
+      <Label layoutX="45.0" layoutY="200.0" text="Hytt info" />
+      <Button layoutX="312.0" layoutY="338.0" mnemonicParsing="false" onAction="#saveCabin" text="Spara" />
+   </children>
+</AnchorPane>

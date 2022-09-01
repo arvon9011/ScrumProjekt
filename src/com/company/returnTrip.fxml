@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.company.ReturnTripController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ComboBox fx:id="departureDate" layoutX="14.0" layoutY="33.0" onAction="#chooseDate" prefHeight="28.0" prefWidth="150.0" promptText="Avresedatum" />
+        <ComboBox fx:id="cabinOptions" layoutX="14.0" layoutY="122.0" onAction="#cabinOptionsComboBox" prefHeight="28.0" prefWidth="150.0" promptText="Hytt" />
+        <ComboBox fx:id="foodOptions" layoutX="14.0" layoutY="206.0" onAction="#foodOptionsComboBox" prefHeight="28.0" prefWidth="150.0" promptText="Matpaket" />
+        <DatePicker fx:id="date" layoutX="198.0" layoutY="286.0" prefHeight="28.0" />
+        <ComboBox fx:id="activities" layoutX="15.0" layoutY="286.0" prefHeight="28.0" prefWidth="117.0" promptText="Evenemang" />
+        <TextArea fx:id="cabinInfo" editable="false" layoutX="198.0" layoutY="103.0" prefHeight="65.0" prefWidth="251.0" promptText="HyttInfo" />
+        <TextArea fx:id="foodInfo" editable="false" layoutX="198.0" layoutY="194.0" prefHeight="52.0" prefWidth="250.0" promptText="MatPaketInfo" />
+        <Button fx:id="add" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#addActivities" prefHeight="28.0" prefWidth="61.0" text="Lägg till" />
+        <ComboBox fx:id="showActivities" layoutX="198.0" layoutY="323.0" prefHeight="28.0" prefWidth="150.0" promptText="Tillagda" />
+        <Button fx:id="delete" layoutX="368.0" layoutY="325.0" mnemonicParsing="false" onAction="#deleteActivities" prefHeight="28.0" text="Ta bort" />
+        <TextArea fx:id="availability" layoutX="198.0" layoutY="16.0" prefHeight="61.0" prefWidth="250.0" promptText="Tillgänglighet" />
+        <Button layoutX="411.0" layoutY="288.0" mnemonicParsing="false" onAction="#sendToData" text="Send" />
+    </children>
+</AnchorPane>

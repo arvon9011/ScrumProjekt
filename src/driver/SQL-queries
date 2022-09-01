@@ -1,0 +1,43 @@
+package com.company;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.*;
+import javax.sql.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+/*
+        try     {
+            // Infon varierar beroende på er dator, men user och password borde ni kunna. URL:n borde va den samma.
+            Connection Myconn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Mars_travels", "root", "TEST");
+            // inte helt säker på vad en statement faktiskt är, men den här behövs.
+            Statement myStatement = Myconn.createStatement();
+
+            String bubb = "Bubbis"; // strängarna är test inför inmatning senare
+            String bubub = "brpapa@hotmail.com";
+        String sql = "insert into customers" + "(name, email)" + "values ('" + bubb + "'," + "'" + bubub + "')"; // den här strängen är det som faktiskt körs via raden under.
+            myStatement.executeUpdate(sql); // "SQL" stringen körs in i SQL
+            }
+        catch (Exception exc) {
+            exc.printStackTrace();
+        }
+
+
+        }
+    }
+
+
+
+
+/*
+
+        ResultSet myRes = myStatement.executeQuery("select * from customers;");
+        // process the result set
+        while (myRes.next()) {
+        System.out.println(myRes.getString("name"));
+// man kunde ta bort "adress" ur sista raden, alltså blir det superlätt att leta upp info. FUCK VA SKÖNT */
+

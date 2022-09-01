@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.MarsLogiController">
+   <children>
+      <ComboBox fx:id="durationOfStay" layoutX="14.0" layoutY="14.0" onAction="#calcCost" prefWidth="150.0" promptText="Vistelselängd" />
+      <ComboBox fx:id="hotelOptions" layoutX="15.0" layoutY="117.0" onAction="#hotelOptionsComboBox" prefHeight="28.0" prefWidth="233.0" promptText="Hotell" />
+      <ComboBox fx:id="hotelRoomOptions" layoutX="258.0" layoutY="117.0" onAction="#calcCost" prefHeight="28.0" prefWidth="233.0" promptText="Rum (månadspris)" />
+      <TextArea fx:id="hotelInfo" editable="false" layoutX="14.0" layoutY="149.0" prefHeight="78.0" prefWidth="478.0" promptText="Hotellinfo" wrapText="true" />
+      <TextArea fx:id="activityInfo" editable="false" layoutX="14.0" layoutY="243.0" prefHeight="88.0" prefWidth="478.0" promptText="Aktivitetinfo" wrapText="true" />
+      <Label layoutX="15.0" layoutY="227.0" text="Aktiviteter" />
+      <Label layoutX="14.0" layoutY="39.0" text="Logi" />
+      <Label layoutX="336.0" layoutY="18.0" text="Summa Mars" />
+      <TextField fx:id="sumCost" alignment="CENTER_RIGHT" editable="false" layoutX="409.0" layoutY="14.0" prefHeight="25.0" prefWidth="83.0" promptText=" kr" />
+      <TextArea fx:id="commonInfo" editable="false" layoutX="14.0" layoutY="56.0" prefHeight="57.0" prefWidth="478.0" promptText="Allmän info" wrapText="true" />
+   </children>
+</AnchorPane>

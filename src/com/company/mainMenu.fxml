@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.MainMenuController">
+   <children>
+      <Button layoutX="31.0" layoutY="151.0" mnemonicParsing="false" onAction="#bokaResaButton" text="Boka resa" />
+      <Button layoutX="119.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Sök resa" />
+      <Button layoutX="201.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Statistik" />
+      <Label layoutX="53.0" layoutY="42.0" text="Mars Travels">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
